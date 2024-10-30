@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+  </head>
+  <body>
+    <section class="form-section">
+      <form name="form" onsubmit="return false">
+        <div class="input-group">
+          <div class="input-with-label">
+            <label for="name">Name</label>
+            <input name="name" id="name" type="text" />
+          </div>
+          <div class="input-with-label">
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email" />
+          </div>
+          <div class="input-with-label">
+            <label for="phone">Phone</label>
+            <input name="phone" id="phone" type="text" />
+          </div>
+          <div class="input-with-label">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="modal-close-wrap">
+        <button class="modal-close-btn">&#10005;</button>
+      </div>
+      <div class="modal-text">
+        <p class="modal-title">Success!</p>
+        <p class="modal-message">Your application has been successfully sent</p>
+      </div>
+    </div>
+    <button class="open-modal-btn">Open Modal</button>
+  </body>
+</html>
