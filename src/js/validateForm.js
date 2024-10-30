@@ -34,15 +34,11 @@ export default async function onFormSubmit() {
     phone: inputs.phone.value,
     message: inputs.message.value,
   });
-  console.log(body);
   const messageFromServer = await register(body);
-  console.log(messageFromServer);
   if (messageFromServer.status === "error") {
-    console.log(messageFromServer.fields);
     for (let key in messageFromServer.fields) {
       inputs[key].classList.add("has-error");
       const inputGroup = inputs[key].closest(".input-with-label");
-      const hasError = !!inputGroup.querySelector(".input-errorText");
       const error = document.createElement("div");
       error.classList.add("input-errorText");
       error.textContent = messageFromServer.fields[key];

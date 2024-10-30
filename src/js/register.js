@@ -11,7 +11,6 @@ export default async function register(body) {
     });
     if (!response.ok) {
       const data = await response.json();
-      console.log(data);
       throw new Error(response.status);
     }
     const data = await response.json();
